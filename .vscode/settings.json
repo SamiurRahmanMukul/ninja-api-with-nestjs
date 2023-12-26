@@ -1,0 +1,20 @@
+{
+  // EDITOR CONFIGURATION
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+
+  // FILES CONFIGURATION
+  "files.associations": {
+    "html": "html",
+    "*.css": "tailwindcss"
+  },
+
+  // ESLINT CONFIGURATION
+  "eslint.validate": ["javascript", "javascriptreact"],
+
+  // CODE SPELL IGNORE
+  "cSpell.words": ["nestjs"]
+}
