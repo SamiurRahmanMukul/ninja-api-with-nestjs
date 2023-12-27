@@ -16,5 +16,5 @@
   "eslint.validate": ["javascript", "javascriptreact"],
 
   // CODE SPELL IGNORE
-  "cSpell.words": ["nestjs"]
+  "cSpell.words": ["nestjs", "typeorm"]
 }

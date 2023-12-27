@@ -1,11 +1,26 @@
 import { Module } from '@nestjs/common';
+import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { NinjasModule } from './ninjas/ninjas.module';
+import { User } from './user/entities/user.entity';
 import { UserModule } from './user/user.module';
 
 @Module({
-  imports: [NinjasModule, UserModule],
+  imports: [
+    TypeOrmModule.forRoot({
+      type: 'mysql',
+      host: 'localhost',
+      port: 3306,
+      username: 'root',
+      password: 'root',
+      database: 'ninja-api-with-nestjs',
+      entities: [User],
+      synchronize: true,
+    }),
+    NinjasModule,
+    UserModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
